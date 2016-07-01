@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/Home"
+            />
+        <item
+            android:id="@+id/nav_topStories"
+            android:title="@string/Top_Stories"
+            />
+        <item
+            android:id="@+id/nav_fav"
+            android:title="@string/fav"
+            />
+        <item
+            android:id="@+id/nav_country"
+            android:title="India"
+            />
+
+        <item
+            android:id="@+id/nav_entertainment"
+            android:title="@string/entertainment"
+            />
+        <item
+            android:id="@+id/nav_sat"
+            android:title="@string/sat"
+            />
+        <item
+            android:id="@+id/nav_business"
+            android:title="@string/Business"
+            />
+        <item
+            android:id="@+id/nav_politics"
+            android:title="@string/Politics"
+            />
+        <item
+            android:id="@+id/nav_sports"
+            android:title="@string/Sports"
+            />
+        <item
+            android:id="@+id/nav_lifestyle"
+            android:title="@string/Lifestyle"
+            />
+
+    </group>
+    <item android:title="@string/Preferences">
+        <menu>
+            <item
+                android:id="@+id/nav_feedback"
+                android:title="@string/Feedback"
+                />
+            <item
+                android:id="@+id/nav_settings"
+                android:title="@string/Settings"
+               />
+            <!--<item
+                android:id="@+id/nav_send"
+                android:title="Country"
+               />-->
+            <item
+                android:id="@+id/nav_rate"
+                android:title="@string/Rate"
+                />
+        </menu>
+    </item>
+
+</menu>

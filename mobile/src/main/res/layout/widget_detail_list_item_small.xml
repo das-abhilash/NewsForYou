@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail"
+
+        android:padding="3dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"><!--android:padding="6dp"-->
+
+        <!--android:layout_width="124dp"
+            android:layout_height="124dp"
+            start|center_vertical-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            ><!--android:padding="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"-->
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/PrimaryText"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_alignParentTop="true"
+                tools:text="Rupee trades lower at 67.17 against US dollar"
+
+                android:maxLines="2"
+                android:minLines="1"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/provider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="NDTV"
+                android:paddingTop="0.5dp"
+                android:layout_below="@+id/name"
+                android:textColor="@color/colorProvider"
+
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1 hour ago"
+                android:textColor="@color/colorTime"
+                android:paddingTop="0.5dp"
+                android:layout_below="@+id/name"
+                android:layout_alignTop="@+id/provider"
+                android:layout_toRightOf="@+id/provider"
+                android:layout_toEndOf="@+id/provider"
+
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    </FrameLayout>

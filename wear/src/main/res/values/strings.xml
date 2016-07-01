@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">News For You</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="heading">Today\'s Top Stories</string>
+</resources>

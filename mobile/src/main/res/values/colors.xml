@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9B26AF</color>
+    <color name="colorPrimaryDark">#691A99</color>
+    <color name="colorAccent">#68EFAD</color>
+    <color name="black_alpha_40">#66000000</color>
+    <color name="colorTime">#727272</color>
+    <color name="colorProvider">#447A26</color>
+    <color name="PrimaryText">#212121</color>
+    <color name="colorRed">#B0171F</color>
+    <color name="colorGreen">#00cd00</color>
+    <color name="colorYellow">#ffff00</color>
+    <color name="colorBlue">#0000ff</color>
+
+    <!-- text : #1c2833
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#c8e8ff</color>-->
+</resources>

@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">News For You</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_share">Share</string>
+    <string name="title_activity_search"><!--Search--></string>
+    <string name="title_activity_fav">Favorited Articles</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_category">CategoryActivity</string>
+    <string name="action_search">Search</string>
+    <string name="hint_search">Search Web</string>
+
+    <string name="empty_list">empty!!</string>
+    <string name="pref_news_status_key">news_status</string>
+    <string name="empty_api_volume">Sorry, The API key exceeded its Maximum Volume. Update the app from PlayStore</string>
+    <string name="empty_failed_connect_server">Sorry, Failed to connect to the Server. Check your Connection Setting</string>
+    <string name="empty_no_add">Oops, Something Went Wrong. Couldn\'t Add anything to the List</string>
+    <string name="empty_api_access_denied">Sorry, The Access Denied from the Server. Update the app from PlayStore</string>
+    <string name="empty_no_Search"> Oops, Looks like We couldn\'t find anything for this Search</string>
+
+
+    <string name="pref_country_label">Country</string>
+    <string name="pref_country_key">country</string>
+    <string name="pref_country_default">India</string>
+    <string name="widget_title">Today\'s Top Stories</string>
+    <string name="empty_quote_list">sry.. empty</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="empty_list_">empty…</string>
+
+    <string name="pref_title_count">No. of search results</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="Home">Home</string>
+    <string name="Top_Stories">Top Stories</string>
+    <string name="fav">Favorited Articles</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="newsforu">News For You</string>
+    <string name="sat">Science and Technology</string>
+    <string name="Business">Business</string>
+    <string name="Politics">Politics</string>
+    <string name="tag">Curated News just for You</string>
+    <string name="Sports">Sports</string>
+    <string name="Lifestyle">Lifestyle</string>
+    <string name="Preferences">Preferences</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Settings">Settings</string>
+    <string name="Rate">Rate Us</string>
+
+</resources>
