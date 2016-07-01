@@ -251,9 +251,10 @@ public class TwitterTaskService extends GcmTaskService implements GoogleApiClien
                                 mContext.getContentResolver().
                                         applyBatch(NewsProvider.AUTHORITY, news);
                                 updateWidgets();
-                                if (SerachQuery.equals(""))
-                                updateWearApp();
-                                notifyNews();
+                                if (SerachQuery.equals("")) {
+                                    updateWearApp();
+                                    notifyNews();
+                                }
                             } catch (RemoteException | OperationApplicationException e) {
 
                                 e.printStackTrace();
