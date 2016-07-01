@@ -3,45 +3,39 @@
 
     <string-array name="pref_country_options">
         <item>@string/pref_country_label_eng_India</item>
-        <item>@string/pref_country_label_spanish_argentina</item>
         <item>@string/pref_country_label_eng_aus</item>
-        <item>@string/pref_country_label_german_austria</item>
-        <item>@string/pref_country_label_dutch_belgium</item>
-        <item>@string/pref_country_label_portuguese_brazil</item>
-        <item>@string/pref_country_label_french_belgium</item>
         <item>@string/pref_country_label_eng_canada</item>
-        <item>@string/pref_country_label_french_canada</item>
+        <item>@string/pref_country_label_eng_US</item>
+        <item>@string/pref_country_label_eng_UK</item>
     </string-array>
 
     <string-array name="pref_country_values">
         <item>@string/pref_country_label_eng_India_value</item>
-        <item>@string/pref_country_label_spanish_argentina_value</item>
-        <item>@string/pref_country_label_eng_aus_value</item>
-        <item>@string/pref_country_label_german_austria_value</item>
-        <item>@string/pref_country_label_dutch_belgium_value</item>
-        <item>@string/pref_country_label_portuguese_brazil_value</item>
-        <item>@string/pref_country_label_french_belgium_value</item>
+        <item>@string/pref_country_label_eng_Austrelia_value</item>
         <item>@string/pref_country_label_eng_canada_value</item>
-        <item>@string/pref_country_label_french_canada_value</item>
+        <item>@string/pref_country_label_eng_US_value</item>
+        <item>@string/pref_country_label_eng_UK_value</item>
     </string-array>
-    <string name="pref_country_label_spanish_argentina">Spanish (Argentina)</string>
-    <string name="pref_country_label_eng_aus">English (Australia)</string>
-    <string name="pref_country_label_german_austria">German (Austria)</string>
-    <string name="pref_country_label_dutch_belgium">Dutch (Belgium)</string>
-    <string name="pref_country_label_portuguese_brazil">Portuguese (Brazil)</string>
-    <string name="pref_country_label_french_belgium">French (Belgium)</string>
-    <string name="pref_country_label_eng_canada">English (Canada)</string>
-    <string name="pref_country_label_french_canada">French (Canada)</string>
-    <string name="pref_country_label_eng_India">India (English)</string>
 
-    <string name="pref_country_label_spanish_argentina_value">es-AR</string>
-    <string name="pref_country_label_eng_aus_value">en-AU</string>
-    <string name="pref_country_label_german_austria_value">de-AT</string>
-    <string name="pref_country_label_dutch_belgium_value">nl-BE</string>
-    <string name="pref_country_label_portuguese_brazil_value">fr-BE</string>
+    <string name="pref_country_label_eng_India">India (English)</string>
+    <string name="pref_country_label_eng_aus">English (Australia)</string>
+    <string name="pref_country_label_eng_canada">English (Canada)</string>
+    <string name="pref_country_label_eng_US">English (United States) </string>
+    <string name="pref_country_label_eng_UK">English (United Kingdom) </string>
+    <!--<string name="pref_country_label_french_belgium">French (Belgium)</string>
+
+    <string name="pref_country_label_french_canada">French (Canada)</string>-->
+
+
+    <string name="pref_country_label_eng_India_value">en-IN</string>
+    <string name="pref_country_label_eng_Austrelia_value">en-AU</string>
+    <string name="pref_country_label_eng_canada_value">en-CA</string>
+    <string name="pref_country_label_eng_US_value">en-US</string>
+    <string name="pref_country_label_eng_UK_value">en-GB</string>
+    <!--<string name="pref_country_label_portuguese_brazil_value">fr-BE</string>
     <string name="pref_country_label_french_belgium_value">pt-BR</string>
     <string name="pref_country_label_eng_canada_value">en-CA</string>
-    <string name="pref_country_label_french_canada_value">fr-CA</string>
-    <string name="pref_country_label_eng_India_value">en-IN</string>
+    <string name="pref_country_label_french_canada_value">fr-CA</string>-->
+
 
 </resources>

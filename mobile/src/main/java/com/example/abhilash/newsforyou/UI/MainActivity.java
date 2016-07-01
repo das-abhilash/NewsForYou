@@ -9,6 +9,7 @@ import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -16,6 +17,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -67,7 +69,7 @@ import com.google.android.gms.wearable.Wearable;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
     boolean doubleBackToExitPressedOnce = false;
     ViewPager pager;
@@ -83,13 +85,17 @@ public class MainActivity extends AppCompatActivity
     private static final float MIN_ALPHA_ZOOM = 0.5f;
     private static final float SCALE_FACTOR_SLIDE = 0.85f;
     private static final float MIN_ALPHA_SLIDE = 0.35f;
-
+    ViewPagerAdapter adapter;
+    FragmentManager manager;
     String[] categories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref.registerOnSharedPreferenceChangeListener(this);
 
         categories = new String[]{"", Utility.getCountry(this), "World", "Entertainment", "ScienceAndTechnology", "Business", "Politics", "Sports", "Lifestyle"};
 
@@ -127,9 +133,9 @@ public class MainActivity extends AppCompatActivity
 
         pager = (ViewPager) findViewById(R.id.view_pager);
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        FragmentManager manager = getSupportFragmentManager();
+        manager = getSupportFragmentManager();
 
-        ViewPagerAdapter adapter = new ViewPagerAdapter(manager,this);
+        adapter = new ViewPagerAdapter(manager,this, Utility.getCountry(this));
         pager.setAdapter(adapter);
 
         pager.setPageTransformer(false, new ViewPager.PageTransformer() {
@@ -259,12 +265,6 @@ public class MainActivity extends AppCompatActivity
         }, 1500);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        mGoogleApiClient.connect();
-    }
 
 
     @Override
@@ -272,14 +272,6 @@ public class MainActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    @Override
-    protected void onPause() {
-        if ((mGoogleApiClient != null) && (mGoogleApiClient.isConnected())) {
-            mGoogleApiClient.disconnect();
-        }
-        super.onPause();
     }
 
     private void updateWearApp() {
@@ -315,6 +307,31 @@ public class MainActivity extends AppCompatActivity
 
                     }
                 });
+    }
+
+    @Override
+    public void onResume() {
+        mGoogleApiClient.connect();
+        /*SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref.registerOnSharedPreferenceChangeListener(this);*/
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref.unregisterOnSharedPreferenceChangeListener(this);
+        super.onDestroy();
+    }
+
+    @Override
+    public void onPause() {
+        if ((mGoogleApiClient != null) && (mGoogleApiClient.isConnected())) {
+            mGoogleApiClient.disconnect();
+        }
+        /*SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref.unregisterOnSharedPreferenceChangeListener(this);*/
+        super.onPause();
     }
 
     @Override
@@ -459,4 +476,12 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+      if (key.equals(getString(R.string.pref_country_key))){
+          adapter = new ViewPagerAdapter(manager,this, Utility.getCountry(this));
+          pager.setAdapter(adapter);
+          tabLayout.setupWithViewPager(pager);
+        }
+    }
 }

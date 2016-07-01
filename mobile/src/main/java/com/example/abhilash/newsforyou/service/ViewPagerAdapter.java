@@ -13,10 +13,12 @@ import com.example.abhilash.newsforyou.UI.MainActivity;
  */
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
+    String country;
     Context context;
-    public ViewPagerAdapter(FragmentManager fm, Context c) {
+    public ViewPagerAdapter(FragmentManager fm, Context c, String country) {
         super(fm);
         context = c;
+        this.country= country;
     }
 
     @Override
@@ -27,7 +29,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             case 0:
               return   CategoryFragment.newInstance("",title,false);
             case 1:
-                return  CategoryFragment.newInstance(Utility.getCountry(context),title,false);
+                String sd = title;
+                return  CategoryFragment.newInstance(title,title,false);
             case 2:
                 return  CategoryFragment.newInstance("World",title,false);
             case 3:
@@ -48,6 +51,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     }
 
+
+
+
     @Override
     public int getCount() {
         return 9;
@@ -60,7 +66,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 title="Top Stories";
                 break;
             case 1:
-                title=Utility.getCountry(context);
+                title=country;
                 break;
             case 2:
                 title="World";

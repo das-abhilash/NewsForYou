@@ -202,7 +202,7 @@ public class TwitterTaskService extends GcmTaskService implements GoogleApiClien
         } else if (params.getExtras().getString ("tag").equals("add")) {
 
 
-            Call<News> call = service.getBingNews(SerachQuery, "en-IN", "20");
+            Call<News> call = service.getBingNews(SerachQuery, market, "20");
             {
 
                 call.enqueue(new retrofit2.Callback<News>() {
@@ -288,8 +288,8 @@ public class TwitterTaskService extends GcmTaskService implements GoogleApiClien
 
         if (displayNotifications) {
 
-            Intent intent = new Intent(getApplicationContext(), NotificationIntentService.class);
-            startService(intent);
+            Intent intent = new Intent(mContext, NotificationIntentService.class);
+            mContext.startService(intent);
         }
     }
     private void updateWearApp() {

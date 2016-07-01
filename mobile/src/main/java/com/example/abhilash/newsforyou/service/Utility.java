@@ -17,29 +17,17 @@ public class Utility {
             case " en-IN" :
                 Country="India";
                 break;
-            case "es-AR":
+            case "en-AU":
                 Country="Australia";
-                break;
-            case  "en-AU" :
-                Country="Australia";
-                break;
-            case " de-AT" :
-                Country="Austria";
-                break;
-            case "nl-BE" :
-                Country="Belgium";
-                break;
-            case " fr-BE" :
-                Country="Belgium";
-                break;
-            case "pt-BR" :
-                Country="Brazil";
                 break;
             case  "en-CA" :
                 Country="Canada";
                 break;
-            case  "fr-CA" :
-                Country="Canada";
+            case "en-US" :
+                Country="US";
+                break;
+            case "en-GB" :
+                Country="UK";
                 break;
             default:
                 Country="India";

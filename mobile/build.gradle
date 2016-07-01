@@ -12,6 +12,14 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+        release {
+            keyAlias 'app'
+            keyPassword 'qwe@123'
+            storeFile file('C:/Users/IBM_ADMIN/AndroidProject/NewsForYou/keystore.jks')
+            storePassword 'qwe@123'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false

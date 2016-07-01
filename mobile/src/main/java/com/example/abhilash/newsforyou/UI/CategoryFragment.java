@@ -33,6 +33,7 @@ import com.example.abhilash.newsforyou.service.NewsAdapter;
 import com.example.abhilash.newsforyou.service.NewsIntentService;
 import com.example.abhilash.newsforyou.service.RecyclerItemClickListener;
 import com.example.abhilash.newsforyou.service.TwitterTaskService;
+import com.example.abhilash.newsforyou.service.Utility;
 
 
 /**
@@ -250,9 +251,8 @@ public class CategoryFragment extends Fragment implements LoaderManager.LoaderCa
         {
             updateEmptyView();
         } else if (key.equals(getActivity().getString(R.string.pref_country_key))){
-            Intent intent = new Intent(getContext(),MainActivity.class);
-            startActivity(intent);
-        }
+            mParam1 = Utility.getCountry(getActivity());
+                    }
     }
 
 

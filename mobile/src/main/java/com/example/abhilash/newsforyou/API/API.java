@@ -1,9 +1,7 @@
 package com.example.abhilash.newsforyou.API;
 
-/**
- * Created by Abhilash on 6/30/2016.
- */
+
 public class API {
 
-    public static final String API_KEY = "Enter your API Key";
+    public static final String API_KEY = "64caddf10f964b6ca8d2aea5d03e164e";
 }
