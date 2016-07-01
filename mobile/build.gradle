@@ -16,7 +16,7 @@ android {
         release {
             keyAlias 'app'
             keyPassword 'qwe@123'
-            storeFile file('C:/Users/IBM_ADMIN/AndroidProject/NewsForYou/keystore.jks')
+            storeFile file('keystore.jks')
             storePassword 'qwe@123'
         }
     }
